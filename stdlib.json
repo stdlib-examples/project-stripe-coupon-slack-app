@@ -1,0 +1,39 @@
+{
+  "name": "jacoblee/coupon-bot",
+  "timeout": 20000,
+  "version": "0.0.0",
+  "events": [
+    {
+      "slack.command": {
+        "filename": "events/slack/command/apply-coupon.js",
+        "subtype": {
+          "command": "apply-coupon"
+        }
+      }
+    },
+    {
+      "slack.command": {
+        "filename": "events/slack/command/create-coupon.js",
+        "subtype": {
+          "command": "create-coupon"
+        }
+      }
+    },
+    {
+      "slack.dialog_submission": {
+        "filename": "events/slack/dialog_submission/apply-coupon.js",
+        "subtype": {
+          "callback_id": "apply-coupon"
+        }
+      }
+    },
+    {
+      "slack.dialog_submission": {
+        "filename": "events/slack/dialog_submission/create-coupon.js",
+        "subtype": {
+          "callback_id": "create-coupon"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "jacoblee/coupon-bot",
+  "author": "jacoblee",
+  "dependencies": {
+    "lib": "^4.0.4"
+  }
+}
