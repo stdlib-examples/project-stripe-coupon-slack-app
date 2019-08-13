@@ -20,9 +20,9 @@ As the table shows, your app has five handlers:
 1. `events/slack/command/create-coupon.js`, the slash command that opens a dialog that creates new coupons.
 1. `events/slack/dialog_submission/apply-coupon.js`, the handler that gets called when you submit the coupon application dialog. It calls the Stripe API to update the appropriate subscription.
 1. `events/slack/dialog_submission/create-coupon.js`, the handler that gets called when you submit the coupon creation dialog. It calls the Stripe API to create a coupon with the parameters from the dialog.
-1. `events/
+1. `message-menu.js`, the endpoint that retrieves coupon and subscription data from Stripe and populates the menus in the dialog. It acts as a data source for the menus within the dialog.
 
-Before you can deploy the app, you will need to link a Slack app and a Stripe app in **test mode**.
+The final step before deploying the app is linking a Slack app and a Stripe app in **test mode**.
 
 ### Stripe
 
@@ -32,13 +32,12 @@ Click the **Link Resource** button, then select a Stripe app. You're linking you
 
 Click **Link Resource** and follow the instructions to build and link a Slack app.
 
-**Note:** Once deployed, you will still need to register the `/create-coupon` and `/apply-coupon` commands separately in your Slack app dashboard.
-For the slash command's request URL, enter `https://<username>.events.stdlib.com/`.
+After you choose your app, you will still need to register the `/create-coupon` and `/apply-coupon` commands separately in your Slack app dashboard.
 
 ### Creating the Commands on Slack
 
 You can create the `/create-coupon` and `/apply-coupon` commands by visiting [api.slack.com/apps](https://api.slack.com/apps),
-selecting your app, then clicking **Slash commands** on the left sidebar.
+selecting your app, then clicking **Slash Commands** on the left sidebar.
 
 ![](./readme/images/slack-create-command.png)
 
@@ -52,9 +51,8 @@ Click **Save** in the bottom right to proceed. Repeat this process for `/apply-c
 
 ### Set your Options Load URL
 
-Next click **Interactive Components** on the left sidebar.
-Scroll down to "Message Menus" and set the "Options Load URL" to be:
-`https://<username>.api.stdlib.com/coupon-bot@dev/message_menu/`
+Finally, click **Interactive Components** on the left sidebar. Enable interactivity if it is not enabled and make sure that the **Interactivity** URL is set as `https://<username>.events.stdlib.com`, then scroll down to "Message Menus" and set the "Options Load URL" to be:
+`https://<username>.api.stdlib.com/coupon-bot@dev/message-menu/`
 
 Where `<username>` is your Standard Library username.
 
