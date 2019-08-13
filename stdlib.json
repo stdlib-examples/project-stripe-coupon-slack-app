@@ -34,11 +34,6 @@
           "callback_id": "create-coupon"
         }
       }
-    },
-    {
-      "http.request": {
-        "filename": "message_menu.js"
-      }
     }
   ]
 }

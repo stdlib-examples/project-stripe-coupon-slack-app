@@ -16,10 +16,11 @@ You'll be asked to create a new account or log in, then you will see a screen su
 ![](./readme/images/deploy.png)
 
 As the table shows, your app has five handlers:
-1. `events/slack/command/create-coupon.js`, the slash command that opens a dialog to create new coupons.
+1. `events/slack/command/apply-coupon.js`, the slash command that opens a dialog that applies coupons to existing subscribers.
+1. `events/slack/command/create-coupon.js`, the slash command that opens a dialog that creates new coupons.
+1. `events/slack/dialog_submission/apply-coupon.js`, the handler that gets called when you submit the coupon application dialog. It calls the Stripe API to update the appropriate subscription.
 1. `events/slack/dialog_submission/create-coupon.js`, the handler that gets called when you submit the coupon creation dialog. It calls the Stripe API to create a coupon with the parameters from the dialog.
-1. `events/slack/command/apply-coupon.js`, the slash command that opens a dialog to apply coupons to existing subscribers.
-1. `events/slack/dialog_submission/apply-coupon.js`, the handler that gets called when you submit the coupon application dialog.
+1. `events/
 
 Before you can deploy the app, you will need to link a Slack app and a Stripe app in **test mode**.
 
