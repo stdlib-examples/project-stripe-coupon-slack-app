@@ -37,10 +37,7 @@
     },
     {
       "http.request": {
-        "filename": "message_menu.js",
-        "subtype": {
-          "name": "message_menu"
-        }
+        "filename": "message_menu.js"
       }
     }
   ]
