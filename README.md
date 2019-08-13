@@ -3,7 +3,8 @@
 This is a Slack and Stripe based coupon management system, written in Node.js
 on [Standard Library](https://stdlib.com). After generating a coupon code with the `/create-coupon` slash command, you can either give the code to a potential new subscriber or apply the code directly to an existing subscription with the `/apply-coupon` command.
 
-![](./readme/images/message.png)
+![](./readme/images/create-coupon-dialog.png)
+![](./readme/images/created-coupon.png)
 
 ## Deploying this Application
 
