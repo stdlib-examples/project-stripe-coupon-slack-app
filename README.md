@@ -1,6 +1,6 @@
 # Stripe Coupon Management Slack App
 
-[<img src="https://deploy.stdlib.com/static/images/deploy.svg" width="192">](https://deploy.stdlib.com/)
+[<img src="https://deploy.stdlib.com/static/images/deploy.svg?" width="192">](https://deploy.stdlib.com/)
 
 This is a Slack and Stripe based coupon management system, written in Node.js
 on [Standard Library](https://stdlib.com). After generating a coupon code with the `/create-coupon` slash command, you can either give the code to a potential new subscriber or apply the code directly to an existing subscription with the `/apply-coupon` command.
@@ -12,7 +12,7 @@ on [Standard Library](https://stdlib.com). After generating a coupon code with t
 
 You can deploy this Slack App to [Standard Library](https://stdlib.com) by clicking this button:
 
-[<img src="https://deploy.stdlib.com/static/images/deploy.svg" width="192">](https://deploy.stdlib.com/)
+[<img src="https://deploy.stdlib.com/static/images/deploy.svg?" width="192">](https://deploy.stdlib.com/)
 
 You'll be asked to create a new account or log in, then you will see a screen summarizing your app:
 
